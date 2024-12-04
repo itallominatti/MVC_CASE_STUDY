@@ -12,4 +12,4 @@ def people_finder_constructor():
         people_finder_view.find_person_success(response["message"])
     else:
         people_finder_view.find_person_error(response["message"])
-    
+     
