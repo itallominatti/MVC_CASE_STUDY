@@ -14,3 +14,24 @@ class PeopleFinderView:
         }
 
         return person_finder_informations
+    
+    def find_person_success(self, message: Dict) -> None:
+        os.system('cls||clear')
+
+        success_message = f"""
+            Usuário encontrado com sucesso!
+
+            Tipo {message['type']}
+            Registros: {message['count']}
+            Infos: :
+                Nome: {message['infos']['name']}
+        """
+        print(success_message)
+
+    def find_person_error(self, message: Dict) -> None:
+
+        error_message = f"""
+            Falha ao buscar usuário!
+            
+            Erro: {message['error']}
+        """
